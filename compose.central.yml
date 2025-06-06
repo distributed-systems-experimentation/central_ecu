@@ -1,0 +1,14 @@
+services:
+  ecu_dashboard:
+    profiles:
+      - car
+    image: localhost:5432/ecu_dashboard:0.1.1
+    build:
+      context: ./ecu_dashboard
+      dockerfile: Dockerfile
+      network: host
+    container_name: ecu_dashboard
+    develop:
+      watch:
+        - action: rebuild
+          path: ./ecu_dashboard
