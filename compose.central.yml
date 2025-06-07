@@ -2,7 +2,7 @@ services:
   ecu_dashboard:
     profiles:
       - car
-    image: localhost:5432/ecu_dashboard:0.1.1
+    image: ghcr.io/distributed-systems-experimentation/ecu_dashboard/ecu_dashboard:v0.1.1
     build:
       context: ./ecu_dashboard
       dockerfile: Dockerfile
